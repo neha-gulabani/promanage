@@ -141,7 +141,7 @@ h2 {
     .auth-left,
     .auth-right {
         flex: none;
-        width: 100%;
+
     }
 
     .astronaut-image {
@@ -151,10 +151,12 @@ h2 {
 
     .auth-left h1 {
         font-size: 1.5rem;
+        text-align: center;
     }
 
     .auth-left p {
         font-size: 1rem;
+        text-align: center;
     }
 
     .login-form,
@@ -175,6 +177,7 @@ h2 {
 
     .login-form {
         align-self: center;
+
     }
 
     .auth-btn,
@@ -185,12 +188,23 @@ h2 {
 }
 
 @media (max-width: 480px) {
+    .auth-container {
+        overflow-y: auto;
+        height: 100vh
+    }
+
     .login-form {
         align-self: center;
+
+
     }
 
     .auth-left h1 {
         font-size: 1.2rem;
+    }
+
+    .auth-left {
+        align-items: center;
     }
 
     .auth-left p {
