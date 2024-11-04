@@ -587,12 +587,13 @@
     .kanban-board {
         padding: 0;
         flex-wrap: wrap;
-        height: auto;
+        max-height: 80vh;
         overflow-y: auto;
         align-self: center;
         justify-self: center;
         margin-left: 0;
         justify-content: center;
+        flex: 0;
 
 
     }

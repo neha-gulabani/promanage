@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Auth from './user/signin';
 import MainPage from './components/dashboard';
@@ -12,10 +12,20 @@ import Sidebar from './components/sidebar';
 
 
 function App() {
+  useEffect(() => {
+    const meta = document.createElement('meta');
+    meta.name = 'viewport';
+    meta.content = 'width=device-width, initial-scale=0.7, maximum-scale=0.9';
+    document.getElementsByTagName('head')[0].appendChild(meta);
+
+    return () => {
+      document.getElementsByTagName('head')[0].removeChild(meta);
+    };
+  }, []);
   return (
     <UserProvider>
       <Router>
-        <AppContent /> {/* Separate component to use useLocation hook */}
+        <AppContent />
       </Router>
     </UserProvider>
   );
@@ -26,7 +36,7 @@ function AppContent() {
 
   return (
     <div style={{ display: 'flex' }}>
-      {/* Render Sidebar only if the path is not "/" */}
+
       {location.pathname !== '/' && !location.pathname.startsWith('/share') && <Sidebar />}
       <div style={{ flex: 1 }}>
         <Routes>

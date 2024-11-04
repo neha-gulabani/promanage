@@ -156,8 +156,13 @@ header button {
 
 @media (max-width: 480px) {
     header {
-        margin-top: 5px;
+        margin-top: 10px;
+
     }
+
+
+
+
 }
 
 @media (max-width: 769px) {
@@ -196,5 +201,6 @@ header button {
         justify-content: space-between;
         margin-bottom: 5px;
         width: 100%;
+
     }
 }

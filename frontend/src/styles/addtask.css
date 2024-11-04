@@ -506,7 +506,18 @@
     .modal-content {
         width: 350px;
 
+
     }
+
+    .user-email {
+        margin: 10px;
+    }
+
+    .users-dropdown {
+        height: 20vh;
+        overflow-y: auto;
+    }
+
 
     .priority-btn {
         font-size: 8px;
@@ -516,6 +527,9 @@
         width: 100px;
         height: 50px;
         font-size: 11px;
+        white-space: normal;
+        word-break: break-word;
+        text-align: center;
     }
 
     .cancel-btn {
@@ -527,6 +541,22 @@
     .save-btn {
         width: 100px;
         height: 50px;
+
+    }
+
+    .priority-container .priority-options {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 5px;
+
+    }
+
+    .priority-container .priority-btn {
+        font-size: 0.6rem;
+        padding: 5px 5px;
+        white-space: normal;
+        word-break: break-word;
+        text-align: center;
 
     }
 }
