@@ -141,7 +141,10 @@ const MainPage = () => {
                 </header>
 
                 <KanbanBoard tasks={filteredTasks} onSave={handleSave} onStatusChange={handleStatusChange} />
-                <AddPeopleModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} tasks={tasks} />
+                {isModalOpen && <AddPeopleModal isOpen={isModalOpen} onClose={() => {
+                    console.log('close')
+                    setModalOpen(false)
+                }} tasks={tasks} />}
             </main>
         </div>
     );
